@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: KB-server1
+    command: streamlit run src/app.py
+    ports:
+      - 80:80
+      - 5678:5678
+      - 8501:8501
+    volumes:
+      - .:/code
